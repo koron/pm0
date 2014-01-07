@@ -1,0 +1,112 @@
+/* pm0.css */
+
+div {
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#screen {
+  position: relative;
+  margin: 0 auto;
+  width: 800px;
+  height: 480px;
+  background: #000;
+  overflow: hidden;
+}
+
+#stage {
+  position: relative;
+  left: 160px;
+  display: inline-block;
+  width: 480px;
+  height: 480px;
+  background: #008;
+  overflow: visible;
+}
+
+#stage .row {
+  position: relative;
+  display: block;
+  overflow: visible;
+  white-space: nowrap;
+  float: left;
+}
+
+#stage .row > .cell {
+  position: relative;
+  display: inline-block;
+  float: left;
+  margin: 0 8px;
+  width: 32px;
+  height: 56px;
+}
+
+#stage .row > .cell:nth-child(odd) {
+  top: 2px;
+}
+
+#stage .row > .cell:nth-child(even) {
+  top: 30px;
+}
+
+.cell:before,
+.cell:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 28px solid transparent;
+  border-bottom: 28px solid transparent;
+}
+
+.cell:before {
+  left: -16px;
+  border-right: 16px solid inherit;
+}
+
+.cell:after {
+  right: -16px;
+  border-left: 16px solid blue;
+}
+
+#stage .row:nth-child(odd) > .cell:nth-child(odd) {
+  background: #f99;
+}
+#stage .row:nth-child(odd) > .cell:nth-child(odd):before {
+  border-right: 16px solid #f99;
+}
+#stage .row:nth-child(odd) > .cell:nth-child(odd):after {
+  border-left: 16px solid #f99;
+}
+
+#stage .row:nth-child(odd) > .cell:nth-child(even) {
+  background: #9f9;
+}
+#stage .row:nth-child(odd) > .cell:nth-child(even):before {
+  border-right: 16px solid #9f9;
+}
+#stage .row:nth-child(odd) > .cell:nth-child(even):after {
+  border-left: 16px solid #9f9;
+}
+
+#stage .row:nth-child(even) > .cell:nth-child(odd) {
+  background: #99f;
+}
+#stage .row:nth-child(even) > .cell:nth-child(odd):before {
+  border-right: 16px solid #99f;
+}
+#stage .row:nth-child(even) > .cell:nth-child(odd):after {
+  border-left: 16px solid #99f;
+}
+
+#stage .row:nth-child(even) > .cell:nth-child(even) {
+  background: #ff9;
+}
+#stage .row:nth-child(even) > .cell:nth-child(even):before {
+  border-right: 16px solid #ff9;
+}
+#stage .row:nth-child(even) > .cell:nth-child(even):after {
+  border-left: 16px solid #ff9;
+}
