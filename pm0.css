@@ -28,6 +28,7 @@ div {
 
 #stage .row {
   position: relative;
+  top: 2px;
   display: block;
   overflow: visible;
   white-space: nowrap;
@@ -44,11 +45,11 @@ div {
 }
 
 #stage .row > .cell:nth-child(odd) {
-  top: 2px;
+  top: 0px;
 }
 
 #stage .row > .cell:nth-child(even) {
-  top: 30px;
+  top: 28px;
 }
 
 .cell:before,
